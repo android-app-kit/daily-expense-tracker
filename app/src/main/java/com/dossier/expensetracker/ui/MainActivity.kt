@@ -1,4 +1,4 @@
-package com.dossier.expensetracker
+package com.dossier.expensetracker.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
