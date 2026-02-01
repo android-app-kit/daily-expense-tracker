@@ -44,6 +44,19 @@ android {
 }
 
 dependencies {
+//
+//    //Icons
+//    implementation("io.github.raamcosta.compose-icons:compose-icons-core:1.1.0")
+//    implementation("io.github.raamcosta.compose-icons:compose-icons-phosphor:1.1.0")
+//    implementation("io.github.raamcosta.compose-icons:compose-icons-fontawesome:5.15.2")
+//    implementation("io.github.raamcosta.compose-icons:compose-icons-bootstrap:1.1.0")
+//    implementation("io.github.raamcosta.compose-icons:compose-icons-tabler:1.1.0")
+
+    // Room
+    implementation("androidx.room:room-runtime:2.8.4")
+    implementation("androidx.room:room-ktx:2.8.4")
+    kapt("androidx.room:room-compiler:2.8.4")
+
     val composeBomVersion = "2023.10.00"
     implementation(platform("androidx.compose:compose-bom:$composeBomVersion"))
 
