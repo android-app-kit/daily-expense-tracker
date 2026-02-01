@@ -2,6 +2,7 @@ package com.dossier.expensetracker.ui.screens.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.dossier.expensetracker.domain.repository.LocalStorage
 import com.dossier.expensetracker.domain.usecase.GetExpenseUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,11 +15,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val getExpenseUseCase: GetExpenseUseCase
+    private val getExpenseUseCase: GetExpenseUseCase,
+    private val localStorage: LocalStorage
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(HomeUiState())
-    val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
-
     init {
         observeItems()
     }
