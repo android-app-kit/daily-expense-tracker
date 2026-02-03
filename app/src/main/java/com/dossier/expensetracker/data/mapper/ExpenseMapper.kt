@@ -43,6 +43,17 @@ fun ExpenseEntity.toModel() = Expense(
 )
 
 @RequiresApi(Build.VERSION_CODES.O)
+fun Expense.toEntity() = ExpenseEntity(
+    id = id,
+    title = title,
+    amount = amount,
+    description = description,
+    type = type,
+    category = category,
+    date = date.toEpochMillis()
+)
+
+@RequiresApi(Build.VERSION_CODES.O)
 fun ZonedDateTime.toEpochMillis(): Long = this.toInstant().toEpochMilli()
 
 @RequiresApi(Build.VERSION_CODES.O)

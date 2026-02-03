@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface ExpenseRepository {
     fun getExpenses() :Flow<List<Expense>>
+    suspend fun save(expense: Expense)
 }
